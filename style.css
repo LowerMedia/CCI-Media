@@ -1,0 +1,72 @@
+/*
+ Theme Name:   CCI Media - LowerMedia Custom Theme
+ Theme URI:    http://example.com/twenty-twelve-child/
+ Description:  Twenty Twelve Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     twentytwelve
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-twelve-child
+*/
+
+/*
+For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
+
+@import url("../twentytwelve/style.css");
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+.site-content {
+	float:left;
+}
+
+.secondary {
+	float: left;
+	width: 30%;
+}
+
+.secondary .widget-area {
+	width:50%;
+	margin-right:50%;
+	border-right: 1px solid #ededed;
+}
+
+body {background:white;}
+body .site {
+	box-shadow: none;
+	background: none;
+}
+
+@media screen and (min-width: 600px) {
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+	border:none;
+	}
+}
+
+.site-header {
+	padding:0;
+	border-bottom: 1px solid #ededed;
+}
+
+.site-header .header-wrap {
+	margin:0 auto;
+	padding:0;
+}
+
+.site-header .header-image {
+max-width: 200px;
+box-shadow: none;}
+
+.header-image-wrap, hgroup {display:block;float:left;}
+
+hgroup {width:100%;margin:20px 0;}
+.site-header .site-title, .site-header .site-description, .site-header .site-phonenumber {text-align:right;}
+
+.site-header .main-navigation .menu-primary-navigation-container ul {float:right;width:auto;}
+
+.site-phonenumber {font-size:2.5em;}
+
