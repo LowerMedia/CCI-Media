@@ -72,6 +72,41 @@ hgroup {width:100%;margin:20px 0;}
 
 /* -------------------------------------------------------------- */
 
+.site-header {border:none;}
 
+.widget-area {float:left;}
 
+.site-content {float:right;}
 
+.entry-title{
+	color:#DD4438;
+	border-bottom:1px solid #E5E0D2;
+}
+
+.entry-content .entry-bubble {
+	background: #380C09;
+	padding: 10px 20px;
+	border-radius: 25px;
+	margin: 40px 40px;
+	color: white;
+}
+
+.widget-area .widget .menu-item a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 600;
+	border-bottom: 1px solid #E5E0D2;
+	width: 100%;
+	margin-bottom: 10px;
+	color: #AA8B09;
+}
+
+.widget .menu li {
+	margin: 15px 0;
+}
+
+.site-content article {border-bottom:none;}
+
+body .footer {border-top:5px solid #380C09;}
+
+.entry-content p {line-height:1.5;}
