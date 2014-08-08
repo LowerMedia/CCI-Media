@@ -14,7 +14,7 @@
 
 <footer id="colophon" role="contentinfo" class='footer'>
 	<div class="site-info">
-		<div class='left'>A LowerMedia Site</div>
+		<div class='left'>A LowerMedia Site<br />Design by @KelseyHuebner</div>
 		<div class='right'>Thank You!</div>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->

@@ -96,9 +96,10 @@ hgroup {width:100%;margin:20px 0;}
 	background: #380C09;
 	padding: 10px 20px;
 	border-radius: 25px;
-	margin: 20px 40px;
+	margin: 20px 120px;
 	color: white;
 	font-size:19px;
+	text-align:center;
 }
 
 .widget-area {margin-top:0;}
@@ -125,8 +126,38 @@ hgroup {width:100%;margin:20px 0;}
 	margin: 10px 0;
 }
 
-.site-content article {border-bottom:none;}
+.site-content article {border-bottom:none;margin-bottom:0;padding-bottom:0;}
 
 body .footer {border-top:5px solid #380C09;}
 
-.entry-content p {line-height:1.5;font-size:16px;
+.entry-content p {line-height:1.5;font-size:16px;}
+
+h3.entry-title {text-align:center;font-weight:medium;}
+
+@media (min-width: 1150px) {
+#contact_info {
+width: 45%;
+}
+}
+
+table {
+border: 1px solid #e5e0d2;
+position: relative;
+margin: auto;
+}
+
+table tr:nth-child(odd) {
+background: #e5e0d2;
+}
+
+@media (min-width: 1150px){}
+ table {
+text-align: left;
+left: 2.5%;
+}
+}
+
+table {
+text-align: left;
+left: 2.5%;
+}
