@@ -39,7 +39,12 @@ body {background:white;}
 body .site {
 	box-shadow: none;
 	background: none;
+	margin:0 auto;
+	max-width: none;
+	width:85%;
 }
+
+body .footer {max-width: none;width:85%;}
 
 @media screen and (min-width: 600px) {
 .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
@@ -57,9 +62,6 @@ body .site {
 	padding:0;
 }
 
-.site-header .header-image {
-max-width: 200px;
-box-shadow: none;}
 
 .header-image-wrap, hgroup {display:block;float:left;}
 
@@ -76,11 +78,12 @@ hgroup {width:100%;margin:20px 0;}
 
 .widget-area {float:left;}
 
-.site-content {float:right;}
+.site-content {float:right;margin-top:0;width:70%;}
 
 .entry-title{
 	color:#DD4438;
 	border-bottom:1px solid #E5E0D2;
+	font-size:24px;
 }
 
 .entry-content .entry-bubble {
@@ -89,16 +92,27 @@ hgroup {width:100%;margin:20px 0;}
 	border-radius: 25px;
 	margin: 40px 40px;
 	color: white;
+	font-size:19px;
 }
+
+.widget-area {margin-top:0;}
+
+.widget-area .header-image {
+	max-width: 225px;
+	box-shadow: none;
+	margin:0;
+	border-radius: 0;
+}
+
 
 .widget-area .widget .menu-item a {
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: 600;
 	border-bottom: 1px solid #E5E0D2;
 	width: 100%;
 	margin-bottom: 10px;
-	color: #AA8B09;
+	color: rgb(170, 139, 9);
 }
 
 .widget .menu li {
@@ -109,4 +123,4 @@ hgroup {width:100%;margin:20px 0;}
 
 body .footer {border-top:5px solid #380C09;}
 
-.entry-content p {line-height:1.5;}
+.entry-content p {line-height:1.5;font-size:16px;
