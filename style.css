@@ -44,7 +44,13 @@ body .site {
 	width:85%;
 }
 
-body .footer {max-width: none;width:85%;}
+body .footer {
+	font-size: 14px;
+	line-height: 22px;
+	max-width: none;
+	width:85%;
+	color: #aa8b09;
+}
 
 @media screen and (min-width: 600px) {
 .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
@@ -90,7 +96,7 @@ hgroup {width:100%;margin:20px 0;}
 	background: #380C09;
 	padding: 10px 20px;
 	border-radius: 25px;
-	margin: 40px 40px;
+	margin: 20px 40px;
 	color: white;
 	font-size:19px;
 }
@@ -116,7 +122,7 @@ hgroup {width:100%;margin:20px 0;}
 }
 
 .widget .menu li {
-	margin: 15px 0;
+	margin: 10px 0;
 }
 
 .site-content article {border-bottom:none;}
