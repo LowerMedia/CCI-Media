@@ -20,144 +20,163 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 -------------------------------------------------------------- */
 
 
-.site-content {
-	float:left;
-}
-
-.secondary {
-	float: left;
-	width: 30%;
-}
-
-.secondary .widget-area {
-	width:50%;
-	margin-right:50%;
-	border-right: 1px solid #ededed;
-}
-
-body {background:white;}
-body .site {
-	box-shadow: none;
-	background: none;
-	margin:0 auto;
-	max-width: none;
-	width:85%;
-}
-
-body .footer {
-	font-size: 14px;
-	line-height: 22px;
-	max-width: none;
-	width:85%;
-	color: #aa8b09;
-}
-
-@media screen and (min-width: 600px) {
-.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
-	border:none;
+	.site-content {
+		float:left;
 	}
-}
 
-.site-header {
-	padding:0;
-	border-bottom: 1px solid #ededed;
-}
+	/*.secondary {
+		float: left;
+		width: 25%;
+	}
 
-.site-header .header-wrap {
-	margin:0 auto;
-	padding:0;
-}
+	.secondary .widget-area {
+		width:50%;
+		margin-right:50%;
+		border-right: 1px solid #ededed;
+	}*/
 
+	body {background:white;}
+	body .site {
+		box-shadow: none;
+		background: none;
+		margin:0 auto;
+		max-width: none;
+		width:85%;
+	}
 
-.header-image-wrap, hgroup {display:block;float:left;}
+	body .footer {
+		font-size: 14px;
+		line-height: 22px;
+		max-width: none;
+		width:85%;
+		color: #aa8b09;
+	}
 
-hgroup {width:100%;margin:20px 0;}
-.site-header .site-title, .site-header .site-description, .site-header .site-phonenumber {text-align:right;}
+	/*@media screen and (min-width: 600px) {
+		.main-navigation ul.nav-menu, 
+		.main-navigation div.nav-menu > ul {
+			border:none;
+			}
+	}*/
 
-.site-header .main-navigation .menu-primary-navigation-container ul {float:right;width:auto;}
+	/*.site-header {
+		padding:0;
+		border-bottom: 1px solid #ededed;
+	}
 
-.site-phonenumber {font-size:2.5em;}
+	.site-header .header-wrap {
+		margin:0 auto;
+		padding:0;
+	}
+*/
+
+	.header-image-wrap, hgroup {display:block;float:left;}
+
+	hgroup {width:100%;margin:20px 0;}
+	.site-header .site-title, .site-header .site-description, .site-header .site-phonenumber {text-align:right;}
+
+	/*.site-header .main-navigation .menu-primary-navigation-container ul {float:right;width:auto;}*/
+
+	/*.site-phonenumber {font-size:2.5em;}*/
 
 /* -------------------------------------------------------------- */
 
-.site-header {border:none;}
 
-.widget-area {float:left;}
+	.site-header {border:none;}
 
-.site-content {float:right;margin-top:0;width:70%;}
+	.widget-area {float:left;}
 
-.entry-title{
-	color:#DD4438;
-	border-bottom:1px solid #E5E0D2;
-	font-size:24px;
-}
+	.site-content {float:right;margin-top:0;width:75%;}
 
-.entry-content .entry-bubble {
-	background: #380C09;
-	padding: 10px 20px;
-	border-radius: 25px;
-	margin: 20px 120px;
-	color: white;
-	font-size:19px;
-	text-align:center;
-}
+	.entry-title{
+		color:#DD4438;
+		border-bottom:1px solid #E5E0D2;
+		font-size:24px;
+	}
 
-.widget-area {margin-top:0;}
+	.entry-content .entry-bubble {
+		background: #380C09;
+		padding: 10px 20px;
+		border-radius: 25px;
+		margin: 20px 120px;
+		color: white;
+		font-size:19px;
+		text-align:center;
+	}
 
-.widget-area .header-image {
-	max-width: 225px;
-	box-shadow: none;
-	margin:0;
-	border-radius: 0;
-}
+/* -- WIDGET STYLES -- */
 
+	.widget-area {margin-top:0;width:25%;}
 
-.widget-area .widget .menu-item a {
-	text-decoration: none;
-	font-size: 24px;
-	font-weight: 600;
-	border-bottom: 1px solid #E5E0D2;
-	width: 100%;
-	margin-bottom: 10px;
-	color: rgb(170, 139, 9);
-}
+	.widget-area .header-image {
+		max-width: 225px;
+		box-shadow: 0 1px 1px 1px #222;
+		margin:0;
+		border-radius: 0;
+	}
 
-.widget .menu li {
-	margin: 10px 0;
-}
+	.widget-area .widget {margin-top:30px;}
+	.widget-area .widget .menu-item a {
+		text-decoration: none;
+		font-size: 24px;
+		font-weight: 400;
+		border-bottom: 1px solid #E5E0D2;
+		width: 100%;
+		margin-bottom: 10px;
+		color: #AA8B09;
+		line-height: 1.75;
+	}
 
-.site-content article {border-bottom:none;margin-bottom:0;padding-bottom:0;}
+	.widget .menu li {
+		margin: 10px 0;
+	}
 
-body .footer {border-top:5px solid #380C09;}
+/* -- CONTENT STYLES -- */
 
-.entry-content p {line-height:1.5;font-size:16px;}
+	.site-content article {border-bottom:none;margin-bottom:0;padding-bottom:0;}
 
-h3.entry-title {text-align:center;font-weight:medium;}
+	.entry-content p {line-height:1.5;font-size:16px;}
 
-@media (min-width: 1150px) {
-#contact_info {
-width: 45%;
-}
-}
+	/*h3.entry-title {text-align:center;font-weight:medium;}*/
 
-table {
-border: 1px solid #e5e0d2;
-position: relative;
-margin: auto;
-}
+/* -- CONTACT PAGE STYLES -- */
 
-table tr:nth-child(odd) {
-background: #e5e0d2;
-}
+	@media (min-width: 1150px) {
+		#contact_info {
+			width: 45%;
+		}
+	}
 
-@media (min-width: 1150px){}
- table {
-text-align: left;
-left: 2.5%;
-}
-}
+	#contact_info h3 {margin-top:0;}
 
-table {
-text-align: left;
-left: 2.5%;
-}
+	table {
+		border: 1px solid #e5e0d2;
+		position: relative;
+		margin: auto;
+	}
+
+	table tr:nth-child(odd) {
+		background: #e5e0d2;
+	}
+
+	@media (min-width: 1150px){}
+	 table {
+			text-align: left;
+			left: 2.5%;
+		}
+	}
+
+	table {
+		text-align: left;
+		left: 2.5%;
+	}
+
+	.wpcf7 {
+		width: 40%;
+		float: left;
+	}
+
+/* -- FOOTER -- */
+	body .footer {border-top:5px solid #380C09;}
+	.footer .site-info .left {float:left;}
+	.footer .site-info .right {float:right;font-weight:bold;}
