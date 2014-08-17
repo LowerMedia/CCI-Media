@@ -16,5 +16,9 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 			<?php endif; ?>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			<?php $posts = get_posts('category=featured-magazine&numberposts=1'); foreach($posts as $post) { ?>
+				<h2><?php the_title(); ?></h2><br />
+				<a href="http://cabinetmakerfdm.com/" target="_blank"><?php the_post_thumbnail( 'medium' ); ?></a>
+			<?php } ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>
