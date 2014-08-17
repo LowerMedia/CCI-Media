@@ -10,85 +10,46 @@
  Text Domain:  twenty-twelve-child
 */
 
-/*
-For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
-
-@import url("../twentytwelve/style.css");
-*/
-
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
 
-	.site-content {
-		float:left;
+	body {
+		background:white;
 	}
 
-	/*.secondary {
-		float: left;
-		width: 25%;
-	}
-
-	.secondary .widget-area {
-		width:50%;
-		margin-right:50%;
-		border-right: 1px solid #ededed;
-	}*/
-
-	body {background:white;}
 	body .site {
 		box-shadow: none;
 		background: none;
 		margin:0 auto;
 		max-width: none;
-		width:85%;
 	}
 
-	body .footer {
-		font-size: 14px;
-		line-height: 22px;
-		max-width: none;
-		width:85%;
-		color: #aa8b09;
+	@media (min-width: 1150px) {
+		body .site{width:85%;}
 	}
 
-	/*@media screen and (min-width: 600px) {
-		.main-navigation ul.nav-menu, 
-		.main-navigation div.nav-menu > ul {
-			border:none;
-			}
-	}*/
+/* -- CONTENT STYLES -- */
 
-	/*.site-header {
-		padding:0;
-		border-bottom: 1px solid #ededed;
-	}
-
-	.site-header .header-wrap {
+	.site-content {
 		margin:0 auto;
-		padding:0;
+		float:none;
+		width:75%;
 	}
-*/
 
-	.header-image-wrap, hgroup {display:block;float:left;}
+	@media (min-width: 1150px) {
+		.site-content {
+			float:right;
+		}
+	}
 
-	hgroup {width:100%;margin:20px 0;}
-	.site-header .site-title, .site-header .site-description, .site-header .site-phonenumber {text-align:right;}
+	.site-content article {
+		border-bottom:none;
+		margin-bottom:0;
+		padding-bottom:0;
+	}
 
-	/*.site-header .main-navigation .menu-primary-navigation-container ul {float:right;width:auto;}*/
-
-	/*.site-phonenumber {font-size:2.5em;}*/
-
-/* -------------------------------------------------------------- */
-
-
-	.site-header {border:none;}
-
-	.widget-area {float:left;}
-
-	.site-content {float:right;margin-top:0;width:75%;}
-
-	.entry-title{
+	.entry-title {
 		color:#DD4438;
 		border-bottom:1px solid #E5E0D2;
 		font-size:24px;
@@ -96,17 +57,35 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 
 	.entry-content .entry-bubble {
 		background: #380C09;
-		padding: 10px 20px;
+		padding: 1% 2%;
 		border-radius: 25px;
-		margin: 20px 120px;
+		margin: 2% 12%;
 		color: white;
 		font-size:19px;
 		text-align:center;
 	}
 
+	.entry-content p {
+		line-height:1.5;
+		font-size:16px;
+	}
+
 /* -- WIDGET STYLES -- */
 
-	.widget-area {margin-top:0;width:25%;}
+
+	.widget-area {
+		margin:0 auto;
+		float:none;
+		text-align: center;
+	}
+
+	@media (min-width: 1150px) {
+		.widget-area {
+			width:25%;
+			float:left;
+			text-align: left;
+		}
+	}
 
 	.widget-area .header-image {
 		max-width: 225px;
@@ -115,7 +94,10 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 		border-radius: 0;
 	}
 
-	.widget-area .widget {margin-top:30px;}
+	.widget-area .widget {
+		margin-top:30px;
+	}
+
 	.widget-area .widget .menu-item a {
 		text-decoration: none;
 		font-size: 24px;
@@ -131,14 +113,6 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 		margin: 10px 0;
 	}
 
-/* -- CONTENT STYLES -- */
-
-	.site-content article {border-bottom:none;margin-bottom:0;padding-bottom:0;}
-
-	.entry-content p {line-height:1.5;font-size:16px;}
-
-	/*h3.entry-title {text-align:center;font-weight:medium;}*/
-
 /* -- CONTACT PAGE STYLES -- */
 
 	@media (min-width: 1150px) {
@@ -147,7 +121,9 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 		}
 	}
 
-	#contact_info h3 {margin-top:0;}
+	#contact_info h3 {
+		margin-top:0;
+	}
 
 	table {
 		border: 1px solid #e5e0d2;
@@ -160,7 +136,7 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 	}
 
 	@media (min-width: 1150px){}
-	 table {
+		table {
 			text-align: left;
 			left: 2.5%;
 		}
@@ -177,6 +153,21 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 	}
 
 /* -- FOOTER -- */
-	body .footer {border-top:5px solid #380C09;}
-	.footer .site-info .left {float:left;}
-	.footer .site-info .right {float:right;font-weight:bold;}
+
+	body .footer {
+		font-size: 14px;
+		line-height: 22px;
+		max-width: none;
+		width:85%;
+		color: #aa8b09;
+		border-top:5px solid #380C09;
+	}
+
+	.footer .site-info .left {
+		float:left;
+	}
+
+	.footer .site-info .right {
+		float:right;
+		font-weight:bold;
+	}
