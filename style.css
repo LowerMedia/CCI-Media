@@ -19,10 +19,10 @@
 	}
 
 	body .site {
-		box-shadow: none;
-		background: none;
 		margin:0 auto;
 		max-width: none;
+		background: none;
+		box-shadow: none;
 	}
 
 	@media (min-width: 1150px) {
@@ -32,8 +32,8 @@
 /* -- CONTENT STYLES -- */
 
 	.site-content {
-		margin:0 auto;
 		float:none;
+		margin:0 auto;
 		width:75%;
 	}
 
@@ -44,54 +44,54 @@
 	}
 
 	.site-content article {
-		border-bottom:none;
 		margin-bottom:0;
 		padding-bottom:0;
+		border-bottom:none;
 	}
 
 	.entry-title {
-		color:#DD4438;
 		border-bottom:1px solid #E5E0D2;
+		color:#DD4438;
 		font-size:24px;
 	}
 
 	.entry-content .entry-bubble {
-		background: #380C09;
+		margin: 2% 12%;
 		padding: 1% 2%;
 		border-radius: 25px;
-		margin: 2% 12%;
+		background: #380C09;
 		color: white;
-		font-size:19px;
 		text-align:center;
+		font-size:19px;
 	}
 
 	.entry-content p {
-		line-height:1.5;
 		font-size:16px;
+		line-height:1.5;
 	}
 
 /* -- WIDGET STYLES -- */
 
 
 	.widget-area {
-		margin:0 auto;
 		float:none;
+		margin:0 auto;
 		text-align: center;
 	}
 
 	@media (min-width: 1150px) {
 		.widget-area {
-			width:25%;
 			float:left;
+			width:25%;
 			text-align: left;
 		}
 	}
 
 	.widget-area .header-image {
-		max-width: 225px;
-		box-shadow: 0 1px 1px 1px #222;
 		margin:0;
+		max-width: 225px;
 		border-radius: 0;
+		box-shadow: 0 1px 1px 1px #222;
 	}
 
 	.widget-area .widget {
@@ -99,13 +99,13 @@
 	}
 
 	.widget-area .widget .menu-item a {
-		text-decoration: none;
-		font-size: 24px;
-		font-weight: 400;
-		border-bottom: 1px solid #E5E0D2;
-		width: 100%;
 		margin-bottom: 10px;
+		width: 100%;
+		border-bottom: 1px solid #E5E0D2;
 		color: #AA8B09;
+		text-decoration: none;
+		font-weight: 400;
+		font-size: 24px;
 		line-height: 1.75;
 	}
 
@@ -126,41 +126,41 @@
 	}
 
 	table {
-		border: 1px solid #e5e0d2;
 		position: relative;
 		margin: auto;
+		border: 1px solid #e5e0d2;
 	}
 
 	table tr:nth-child(odd) {
 		background: #e5e0d2;
 	}
 
-	@media (min-width: 1150px){}
+	@media (min-width: 1150px){ }
 		table {
-			text-align: left;
 			left: 2.5%;
+			text-align: left;
 		}
 	}
 
 	table {
-		text-align: left;
 		left: 2.5%;
+		text-align: left;
 	}
 
 	.wpcf7 {
-		width: 40%;
 		float: left;
+		width: 40%;
 	}
 
 /* -- FOOTER -- */
 
 	body .footer {
-		font-size: 14px;
-		line-height: 22px;
 		max-width: none;
 		width:85%;
-		color: #aa8b09;
 		border-top:5px solid #380C09;
+		color: #aa8b09;
+		font-size: 14px;
+		line-height: 22px;
 	}
 
 	.footer .site-info .left {
