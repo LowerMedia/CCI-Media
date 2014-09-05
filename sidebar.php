@@ -19,12 +19,20 @@
 
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>			
 
-			<?php $my_query = new WP_Query( 'category_name=featured-magazine&posts_per_page=1' );
-			while ( $my_query->have_posts() ) : $my_query->the_post();
-			$do_not_duplicate = $post->ID; ?>
-				<h2><?php the_title(); ?></h2><br />
-				<a href="http://cabinetmakerfdm.com/" target="_blank"><?php the_post_thumbnail( 'medium' ); ?></a>
-			<?php endwhile; ?>
+			<h2>CabinetMaker FDM <?php echo date('F Y'); ?></h2><br />
+			<a href="http://cabinetmakerfdm.com/" target="_blank"><img width="225" height="300" src="http://www.cabinetmakerfdm-digital.com/cabinetmakerfdm/current/cover.gif" class="attachment-medium wp-post-image" alt="featuredpub"></a>
+			
+			<div style="display:none;">
+				<?php $my_query = new WP_Query( 'category_name=featured-magazine&posts_per_page=1' );
+				while ( $my_query->have_posts() ) : $my_query->the_post();
+				$do_not_duplicate = $post->ID; ?>
+					<br />
+					<br />
+					<h2><?php the_title(); ?></h2><br />
+					<a href="http://cabinetmakerfdm.com/" target="_blank"><?php the_post_thumbnail( 'medium' ); ?></a>
+					<br />
+				<?php endwhile; ?>
+			</div>
 
 		</div><!-- #secondary -->
 	<?php endif; ?>
