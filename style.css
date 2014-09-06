@@ -1,9 +1,9 @@
 /*
  Theme Name:   CCI Media - LowerMedia Custom Theme
- Theme URI:    http://example.com/twenty-twelve-child/
- Description:  Twenty Twelve Child Theme
- Author:       John Doe
- Author URI:   http://example.com
+ Theme URI:    http://lowermedia.net
+ Description:  CCI Media Built on Twenty Twelve
+ Author:       Pete Lower
+ Author URI:   http://petelower.com
  Template:     twentytwelve
  Version:      1.0.0
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -16,6 +16,7 @@
 
 	body {
 		background:white;
+		font-family: "Signika", arial, sans-serif;
 	}
 
 	body .site {
@@ -27,6 +28,15 @@
 
 	@media (min-width: 1150px) {
 		body .site{width:85%;}
+	}
+
+	.site p, 
+	.site a,
+	.site li,
+	.site h1,
+	.site h2,
+	.site div    {
+		font-family: "Signika", arial, sans-serif;
 	}
 
 /* -- CONTENT STYLES -- */
