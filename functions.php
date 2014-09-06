@@ -1,51 +1,22 @@
 <?php
 
-/*
-#
-#   ADD PRODUCTS CONTENT TYPE (CUSTOM POST TYPE)
-#
-*/
+function load_fonts() {
+    wp_dequeue_style( 'twentytwelve-fonts' );
+    wp_deregister_style( 'twentytwelve-fonts' );
 
-// function products_custom_init() {
-//   $labels = array(
-//     'name' => 'products',
-//     'singular_name' => 'product',
-//     'add_new' => 'Add product',
-//     'add_new_item' => 'Add New product',
-//     'edit_item' => 'Edit product',
-//     'new_item' => 'New product',
-//     'all_items' => 'All products',
-//     'view_item' => 'View product',
-//     'search_items' => 'Search products',
-//     'not_found' =>  'No products found',
-//     'not_found_in_trash' => 'No products found in Trash', 
-//     'parent_item_colon' => '',
-//     'menu_name' => 'products'
-//   );
+    wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Signika:400,700|Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext');
+    wp_enqueue_style( 'googleFonts');
+}
 
-//   $args = array(
-//     'labels' => $labels,
-//     'description'   => 'Canna Delivery product',
-//     'menu_position' => 1,
-//     'public' => true,
-//     'publicly_queryable' => true,
-//     'show_ui' => true, 
-//     'show_in_menu' => true, 
-//     'query_var' => true,
-//     'rewrite' => array( 'slug' => 'canna-delivery-products' ),
-//     'capability_type' => 'post',
-//     'has_archive' => true, 
-//     'hierarchical' => false,
-//     'menu_position' => null,
-//     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-//     'taxonomies' => array('category', 'post_tag')
-//   ); 
+add_action('wp_print_styles', 'load_fonts');
 
-//   register_post_type( 'products', $args );
-// }
-// add_action( 'init', 'products_custom_init' );
-
-
+//Remove contact form 7 stylesheet as it is unnecessary
+function lowermedia_deregister_cf7style (){
+    wp_dequeue_style( 'contact-form-7' );
+    wp_deregister_style( 'contact-form-7' );
+}
+add_action( 'wp_enqueue_scripts', 'lowermedia_deregister_cf7style' );
+//http://cci-media.petelower.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.3
 
 /*
 #
