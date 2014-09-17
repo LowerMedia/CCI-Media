@@ -75,6 +75,12 @@
 		font-size:19px;
 	}
 
+	@media (max-width: 1024px) {
+		.entry-content .entry-bubble {
+			margin: 5% 0;
+		}
+	}
+
 	.entry-content p {
 		font-size:16px;
 		line-height:1.5;
@@ -86,6 +92,7 @@
 	.widget-area {
 		float:none;
 		margin:0 auto;
+		width:100%;
 		text-align: center;
 	}
 
@@ -133,6 +140,7 @@
 
 	#contact_info h3 {
 		margin-top:0;
+		text-align:center;
 	}
 
 	table {
@@ -145,21 +153,16 @@
 		background: #e5e0d2;
 	}
 
-	@media (min-width: 1150px){ }
-		table {
-			left: 2.5%;
-			text-align: left;
-		}
-	}
-
-	table {
-		left: 2.5%;
-		text-align: left;
-	}
-
 	.wpcf7 {
 		float: left;
-		width: 40%;
+		width: 45%;
+	}
+
+	@media (max-width: 1024px) {
+		.hentry .alignleft {float:none;}
+		.hentry .alignright {float:none;text-align: center;}
+		.wpcf7 {width:100%;text-align: center;}
+		.wpcf7 .your-message textarea {font-size: 70%;}
 	}
 
 /* -- FOOTER -- */
@@ -172,6 +175,7 @@
 		font-size: 14px;
 		line-height: 22px;
 	}
+
 
 	.footer .site-info .left {
 		float:left;

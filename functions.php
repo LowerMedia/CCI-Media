@@ -1,5 +1,96 @@
 <?php
 
+/*
+#
+#   WHITE LABEL
+#
+*/
+
+//* Replace WordPress login logo with your own
+add_action('login_head', 'lm_custom_login_logo');
+function lm_custom_login_logo() {
+    echo '<style type="text/css">
+    body {background-color:white;}
+    h1 a 
+    { 
+        background-image:url(/wp-content/uploads/2014/08/CCImedia_300.png) !important; 
+        background-size: 300px 123px !important;
+        height: 123px !important; 
+        width: 300px !important; 
+        margin-bottom: 0 !important; 
+        padding-bottom: 0 !important;
+        box-shadow: 0 1px 1px 1px #222;
+    }
+    .login form { margin-top: 10px !important; }
+    </style>';
+}
+
+//* Change the URL of the WordPress login logo
+function lm_url_login_logo(){
+    return get_bloginfo( 'wpurl' );
+}
+add_filter('login_headerurl', 'lm_url_login_logo');
+
+//* Login Screen: Change login logo hover text
+function lm_login_logo_url_title() {
+  return 'A LowerMedia Site';
+}
+add_filter( 'login_headertitle', 'lm_login_logo_url_title' );
+
+//* Login Screen: Don't inform user which piece of credential was incorrect
+function lm_failed_login () {
+  return 'The login information you have entered is incorrect. Please try again.';
+}
+add_filter ( 'login_errors', 'lm_failed_login' );
+
+//* Modify the admin footer text
+function lm_modify_footer_admin () {
+  echo '<style type="text/css">
+        #footer-upgrade{color:transparent;}
+        #footer-upgrade:after {
+        content: "Created For CCI Media";
+        color: #777;
+        }
+        a[target="_donate"],
+        a[target="_cf7todb"],
+        #bwp-info-place,
+        .plugin-menu-page-upsells,
+        .plugin-menu-page-heading img {display:none;}
+        .plugin-menu-page-heading  {height:50px;}
+    </style>
+    <span id="footer-meta"><a href="http://lowermedia.net" target="_blank">A LowerMedia Site</a></span>';
+}
+add_filter('admin_footer_text', 'lm_modify_footer_admin');
+
+//* Add theme info box into WordPress Dashboard
+function lm_add_dashboard_widgets() {
+  wp_add_dashboard_widget('wp_dashboard_widget', 'Theme Details', 'lm_theme_info');
+}
+add_action('wp_dashboard_setup', 'lm_add_dashboard_widgets' );
+ 
+function lm_theme_info() {
+  echo "<ul>
+  <li><strong>Developed By:</strong> LowerMedia.Net</li>
+  <li><strong>Website:</strong> <a href='http://lowermedia.net'>www.lowermedia.net</a></li>
+  <li><strong>Contact:</strong> <a href='mailto:pete.lower@gmail.com'>pete.lower@gmail.com</a></li>
+  </ul>";
+}
+
+function custom_admin_logo() {
+    echo '
+        <style type="text/css">
+            #wp-admin-bar-wp-logo { display:none !important; }
+        </style>
+    ';
+}
+add_action('admin_head', 'custom_admin_logo');
+
+/*
+#
+#   SPEED OPTIMIZATIONS
+#
+*/
+
 function load_fonts() {
     wp_dequeue_style( 'twentytwelve-fonts' );
     wp_deregister_style( 'twentytwelve-fonts' );
@@ -17,6 +108,11 @@ function lowermedia_deregister_cf7style (){
 }
 add_action( 'wp_enqueue_scripts', 'lowermedia_deregister_cf7style' );
 //http://cci-media.petelower.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.3
+
+function lowermedia_deregister_javascript() {
+    wp_deregister_script( 'contact-form-7' );
+}
+add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
 
 /*
 #
